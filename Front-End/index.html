@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+
+        <button onclick="recupere()">Click moi</button>
+
+        <div id='ourson1'></div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            function recupere() {
+
+                fetch('http://localhost:3000/api/teddies')
+                    .then(
+                        response => response.json())
+                    .then(
+                        (data) => {
+                            for (var i = 0; i<5; i++) {
+                                affiche(data, i)
+                            }
+                        }
+                    );
+            }
+            function affiche(data, index) {
+                var ourson = data[index];
+                var s =   '<h2>'   + ourson['name'] + '</h2>'
+                        + '<p>'    + ourson['description']+'</p>'
+                        + '<span>' + ourson['imageUrl'] + '</span> euros';
+                $('#ourson1').append(s);
+            }
+            /*
+                colors: (4) ["Tan", "Chocolate", "Black", "White"]
+                description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                imageUrl: "http://localhost:3000/images/teddy_1.jpg"
+                name: "Norbert"
+                price: 2900
+                _id: "5be9c8541c9d440000665243"
+            */
+
+        </script>
+    </body>
+
+
+</html>
