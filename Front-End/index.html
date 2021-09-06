@@ -1,50 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <title>Orinoco</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <img src="./logo.png" alt="logo">
+            <i class="fas fa-shopping-basket"></i>
+        </nav>
+    </header>
 
-    </head>
+    <section class="main">
+        <div class="produits">
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+            <div class="produit">
+                <a href="">
+                    <div class="produit_img">a</div>
+                    <div class="produit_description">a</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <body>
 
 
-        <button onclick="recupere()">Click moi</button>
-
-        <div id='ourson1'></div>
+    <footer></footer>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script>
-            function recupere() {
 
-                fetch('http://localhost:3000/api/teddies')
-                    .then(
-                        response => response.json())
-                    .then(
-                        (data) => {
-                            for (var i = 0; i<5; i++) {
-                                affiche(data, i)
+    <!--<button onclick="recupere()">Click moi</button>
+
+            <div id='ourson1'></div>
+
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script>
+                function recupere() {
+
+                    fetch('http://localhost:3000/api/teddies')
+                        .then(
+                            response => response.json())
+                        .then(
+                            (data) => {
+                                for (var i = 0; i<5; i++) {
+                                    affiche(data, i)
+                                }
                             }
-                        }
-                    );
-            }
-            function affiche(data, index) {
-                var ourson = data[index];
-                var s =   '<h2>'   + ourson['name'] + '</h2>'
-                        + '<p>'    + ourson['description']+'</p>'
-                        + '<span>' + ourson['imageUrl'] + '</span> euros';
-                $('#ourson1').append(s);
-            }
-            /*
-                colors: (4) ["Tan", "Chocolate", "Black", "White"]
-                description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                imageUrl: "http://localhost:3000/images/teddy_1.jpg"
-                name: "Norbert"
-                price: 2900
-                _id: "5be9c8541c9d440000665243"
-            */
+                        );
+                }
+                function affiche(data, index) {
+                    var ourson = data[index];
+                    var s =   '<h2>'   + ourson['name'] + '</h2>'
+                            + '<p>'    + ourson['description']+'</p>'
+                            + '<span>' + ourson['imageUrl'] + '</span> euros';
+                    $('#ourson1').append(s);
+                }
+                /*
+                    colors: (4) ["Tan", "Chocolate", "Black", "White"]
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    imageUrl: "http://localhost:3000/images/teddy_1.jpg"
+                    name: "Norbert"
+                    price: 2900
+                    _id: "5be9c8541c9d440000665243"
+                */
 
-        </script>
-    </body>
-
-
+            </script> -->
+    </div>
+</body>
 </html>
