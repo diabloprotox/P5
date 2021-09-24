@@ -1,0 +1,33 @@
+/* Header*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3e9f1;
+}
+
+nav img{
+    width: 20%;
+    height: auto;
+    margin-left: 20px;
+}
+
+nav i{
+    margin-right: 50px;
+    font-size: 30px;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+

@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+html{
+    height: 100%;
+}*/
+
+/* Header*/
+
+body{
+    background-color: #f3e9f1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3e9f1;
+}
+
+nav img{
+    width: 20%;
+    height: auto;
+    margin-left: 20px;
+}
+
+nav i{
+    margin-right: 50px;
+    font-size: 30px;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Section Main  */
+
+.main{
+    background-color:#f3e9f1;
+}
+
+.titre{
+    background: url(../images/lens-3114729_1920.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    background-size: cover;
+}
+
+.titre h1{
+    margin-left: 20px ;
+    color: #261624;
+    font-size: 50px;
+}
+
+.titre h2{
+    margin-left: 20px;
+    font-size: 23px;
+    color: #261624;
+}
+
+.produits{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+    padding: 30px;
+}
+
+.produit{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.46);
+}
+.produit:hover{
+    box-shadow: 4px 4px 5px 3px rgba(0,0,0,0.46);
+}
+
+.produit_description{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgproduit{
+    object-fit: cover;
+    width: 100%;
+    height: 166px;
+}
+
+
+
+footer{
+    text-align: center;
+    padding-top: 20px;
+}

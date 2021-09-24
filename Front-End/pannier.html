@@ -7,6 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let loc = window.localStorage;
+        let order = loc.getItem('commande');
+        console.log(order)
+        const produitID = document.querySelector(produitID)
+
+        fetch('http://localhost:3000/api/cameras/')
+            .then(
+                response => response.json()
+            )
+            .then(
+                data => {
+                    produitID = data._id
+                }
+            )
+
+        function affichage(data){
+            let id = []
+            for (_id in order){
+                id = [_id,]
+                console.log(id);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/produit.css">
+    <title>Camera</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+            <a href="./pannier.html"><i class="fas fa-shopping-basket"></i></a>
+        </nav>
+    </header>
+    <main>
+        <div class="produit">
+            <div class="produitName">
+
+            </div>
+            <div class="produitIMG">
+                <img src="" alt="" class="img">
+            </div>
+            <div class="produitDescription">
+            </div>
+            <strong id="prix"></strong>
+            <div .produitChoix>
+                <select name="lentilles" id="lentilles-select">
+                    <option value="">Lentilles</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <button onclick='AjouterPanier()'>Ajouter au Pannier</button>
+        </div>
+    </main>
+    <script src="./scripts/produit.js"></script>
 </body>
 </html>
