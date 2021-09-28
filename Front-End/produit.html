@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
@@ -12,32 +14,57 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
-            <a href="./pannier.html"><i class="fas fa-shopping-basket"></i></a>
+        <nav class="navbar navbar-expand-lg">
+            <div>
+                <a href="./index.html"><img class=".img-responsive" src="./images/logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-item">
+                <a class="navbar-link" href="./pannier.html"><i class="fas fa-shopping-basket"></i></a>
+            </div>
         </nav>
     </header>
-    <main>
-        <div class="produit">
-            <div class="produitName">
-
+    <main class="container mt-5">
+        <div class="produit row">
+            <div class="produitIMG col  col-12 col-sm-12 col-md-6 col-lg-6">
+                <img src="" alt="" class="img img-fluid">
             </div>
-            <div class="produitIMG">
-                <img src="" alt="" class="img">
+            <div class="col col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="produitName h1">
+                </div>
+                <div class="produitDescription">
+                </div>
+                <strong id="prix"></strong>
+                <div .produitChoix>
+                <div class="produittype">
+                    <label class="labelchoix" for="lentilles-select">Choisissez une taille de lentille:</label>
+                    <select name="lentilles" id="lentilles-select">
+                        <option value="">Lentilles</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="produitnombre">
+                    <label class="labelchoix" for="nombreproduits">Quantitée:</label>
+                    <select name="nombre" id="nombreproduits">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                </div>
+                <div class="buy mt-4">
+                    <button onclick='AjouterPanier()'>Ajouter au Pannier</button>
+                </div>
             </div>
-            <div class="produitDescription">
-            </div>
-            <strong id="prix"></strong>
-            <div .produitChoix>
-                <select name="lentilles" id="lentilles-select">
-                    <option value="">Lentilles</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </div>
-            <button onclick='AjouterPanier()'>Ajouter au Pannier</button>
+            
         </div>
     </main>
+    <footer class="footer mt-5 pb-2">
+        <div class="container d-flex justify-content-center">&copy Orinoco 2021</div>
+    </footer>
     <script src="./scripts/produit.js"></script>
 </body>
 </html>
