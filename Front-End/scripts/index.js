@@ -6,7 +6,6 @@ fetch('http://localhost:3000/api/cameras')
             )
             .then(
                 (data) => {
-                    console.log(data);
                     for (var i = 0; i<data.length; i++) {
                         affiche(data[i]);
                     }
@@ -16,7 +15,6 @@ fetch('http://localhost:3000/api/cameras')
 // Affichage des produits
 function affiche(camera) {
     const produit = document.createElement('a');
-    console.log(camera);
     produit.setAttribute('href',`./produit.html?id=${camera['_id']}`);
     produit.innerHTML= `
         <div class="produit">
@@ -32,13 +30,3 @@ function affiche(camera) {
     `;
     document.getElementById('produits_container').appendChild(produit);
 }
-        
-
-        /*
-            ETAPE1: Attendre que la page ait chargé
-            ETAPE2: fetch data API -> recuperer les données des cameras
-            ETAPE3: Afficher les cameras sur la page automatiquement
-                > SOUS-ETAPE: Creer une fonction qui prend en argument une camera et qui l'áffiche sur la page
-                > SOUS-ETAPE: Appeler cette fonction pour chaque camera
-
-        */
